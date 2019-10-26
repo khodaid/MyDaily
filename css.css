@@ -1,0 +1,44 @@
+header {
+    background-color: rgb(199, 199, 195);
+    padding-inline: 0px;
+    padding: 20px;
+    margin: 0px;
+}
+
+nav {
+    border-bottom-color: rgb(161, 159, 156);
+    position: relative;
+    left: 1075px;
+}
+
+nav button {
+    margin-right: 15px;
+}
+
+section {
+    padding: 20px;
+    padding-right: 0px;
+    background-color: rgb(100, 104, 107);
+    margin-top: 10px;
+    margin-left: 883px;
+    margin-bottom: 0px;
+}
+
+section .container {
+    padding: 5px;
+}
+
+section .container form {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 20px;
+    opacity: 0, 7;
+}
+
+section .container form text {
+    opacity: 30%;
+}
+
+form text {
+    opacity: 50%;
+}
