@@ -6,5 +6,5 @@ $database = "tugaspbo";
 $hostname = "localhost";
 
 $connection = mysql_connect($hostname, $username, $password);
-mysql_select_db($database);
+mysql_select_db($database, $connection);
 ?>

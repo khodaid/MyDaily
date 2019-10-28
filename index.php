@@ -7,7 +7,7 @@ include_once("config.php");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="css/css.css">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -28,9 +28,9 @@ include_once("config.php");
             <ul class="navbar-nav ml-auto ">
               <li class="nav-item active">
                 <button type="button" class="btn btn-light">Sign In</button>
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li>
               <li class="nav-item">
-                <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
                 <button type="button" class="btn btn-light">Sign Up</button>
               </li>
             </ul>
@@ -63,22 +63,22 @@ include_once("config.php");
                 </div>
                   </div>
                 <div class="col-sm-4 mt-5">
-                    <form>
+                    <form method = "get" action ="proses.php" id="form">
                      <div class="form-group">
                         <label for="exampleInputEmail1">Username</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username" name="username">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
                       </div>
                       <div class="form-group">
                         <label for="exampleInputPassword1">Re Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Re Password">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Re Password" name="Repassword">
                       </div>
 
                       <div class="form-group form-check">
@@ -91,6 +91,7 @@ include_once("config.php");
                   </div>
                 </div>
                 </div>
+                
             </div>
     </section>
 </body>
