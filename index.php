@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="css/css.css">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -25,7 +25,15 @@
             <ul class="navbar-nav ml-auto ">
               <form action="LoginAndSignup.php" method="post">
               <li class="nav-item active">
+<<<<<<< HEAD
                 <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+=======
+                <button type="button" class="btn btn-light">Sign In</button>
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+              <li class="nav-item">
+                <button type="button" class="btn btn-light">Sign Up</button>
+>>>>>>> dee708d2f361f7c95bc08673ef73ded58fcbce52
               </li>
                 </form>
             </ul>
@@ -57,23 +65,37 @@
                 </div>
                   </div>
                 <div class="col-sm-4 mt-5">
+<<<<<<< HEAD
                     <form action="login.php" method="post">
+=======
+                    <form method = "get" action ="proses.php" id="form">
+>>>>>>> dee708d2f361f7c95bc08673ef73ded58fcbce52
                      <div class="form-group">
                         <label for="exampleInputEmail1">Username</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username" name="username">
                       </div>
                       <!-- <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
+<<<<<<< HEAD
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                       </div> -->
+=======
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                      </div>
+>>>>>>> dee708d2f361f7c95bc08673ef73ded58fcbce52
                       <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
                       </div>
                       <!-- <div class="form-group">
                         <label for="exampleInputPassword1">Re Password</label>
+<<<<<<< HEAD
                         <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Re Password">
                       </div> -->
+=======
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Re Password" name="Repassword">
+                      </div>
+>>>>>>> dee708d2f361f7c95bc08673ef73ded58fcbce52
 
                       <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -85,6 +107,7 @@
                   </div>
                 </div>
                 </div>
+                
             </div>
     </section>
 </body>
