@@ -1,3 +1,24 @@
+<?php
+if(isset($_POST['submit'])){
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+
+  $connection = mysqli_connect('localhost', 'root', '', 'tugaspbo');
+  if($connection){
+    echo "sukses";
+  } else{
+   die("Database not know"); 
+  }
+
+  $query = "INSERT INTO users(username,password) ";
+  $query .= "VALUES ('$username', '$password')";
+
+  $result = mysqli_query($connection, $query);
+  if(!$result){
+    die('Query is not run');
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,12 +44,15 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto ">
-              <form action="LoginAndSignup.php" method="post">
               <li class="nav-item active">
-                <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+                <button type="button" class="btn btn-light">Sign In</button>
+                </li>
+              <li class="nav-item">
+                <!-- <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->
+                <button type="button" class="btn btn-light">Sign Up</button>
               </li>
-                </form>
             </ul>
+            
           </div>
         </nav>
     </header>
@@ -57,18 +81,18 @@
                 </div>
                   </div>
                 <div class="col-sm-4 mt-5">
-                    <form action="login.php" method="post">
+                    <form action="home.php" method="post">
                      <div class="form-group">
-                        <label for="exampleInputEmail1">Username</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Username">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" class="form-control" placeholder="Username">
                       </div>
                       <!-- <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
                       </div> -->
                       <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" placeholder="Password">
                       </div>
                       <!-- <div class="form-group">
                         <label for="exampleInputPassword1">Re Password</label>
@@ -79,7 +103,7 @@
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                       </div>
-                      <input class="btn btn-primary" type="submit" name="submit" value="Submit">
+                      <input class="btn btn-primary" type="submit" name="submit" value="submit">
                     </form>
                     </div>
                   </div>
