@@ -36,7 +36,7 @@
           <a href="#forgot">Forgot Password?</a>
         </div>
       </form>
-      <form class="sign-up-htm" action="./api/user/signup.php" method="POST">
+      <form class="sign-up-htm" action="LoginAndSignup.php" method="POST">
         <div class="group">
           <label for="user" class="label">Username</label>
           <input id="username" name="username" type="text" class="input">
@@ -50,7 +50,7 @@
           <input id="pass" type="password" class="input" data-type="password">
         </div>
         <div class="group">
-          <input type="submit" class="button" value="Sign Up">
+          <input type="submit" name="signup" class="button" value="Sign Up">
         </div>
         <div class="hr"></div>
         <div class="foot-lnk">
