@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +15,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="row">
+<?php include("./Templates/Header.php");?>
+    <!-- <div class="row">
         <div class="col-sm-3">
             <div class="section rounded-lg">
                 <div class="nav-link">
@@ -23,6 +27,6 @@
         <div class="article rounded-lg col-sm-6 bg-info">
             <h3>coba</h3>
         </div>
-    </div>
+    </div> -->
 </body>
 </html>
