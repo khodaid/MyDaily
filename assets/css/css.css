@@ -1,0 +1,94 @@
+/* .ml-auto {
+    right: 0;
+    left: auto;
+} */
+
+.red {
+    background-color: red;
+}
+
+
+/* .nav-item {
+    margin-right: 10px;
+    margin-left: 30px;
+} */
+
+.nav-collapse {
+    margin-right: 30px;
+}
+
+a .nav-link .home {
+    padding-right: 100px !important;
+}
+
+.article {
+    background-color: rgb(150, 147, 147);
+    margin: 5%;
+    padding: 1%;
+}
+
+.content {
+    background-color: rgb(189, 186, 186);
+}
+
+.image {
+    padding: 5%;
+}
+
+.section {
+    padding: 5%;
+    padding-top: 0%;
+}
+
+.thinks {
+    background-color: white;
+    margin: 3%;
+    padding: 1%;
+}
+
+#main {
+    width: 485px;
+    height: 100px;
+    margin: 2%;
+    margin-bottom: 1px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.video {
+    width: 40px;
+}
+
+.btn {
+    margin-left: 10px;
+    margin-bottom: 2px;
+}
+
+
+/* .custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+.custom-file-input::before {
+    content: icon;
+} */
+
+.custom-file>input {
+    display: none;
+}
+
+.custom-file .icon {
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.posting {
+    margin-right: 30px;
+}
+
+.media img {
+    max-width: 70px;
+}
