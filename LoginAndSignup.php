@@ -1,3 +1,51 @@
+<?php
+session_start();
+include "db.php";
+
+if(isset($_SESSION['nama'])){
+  header("Location:home.php");
+}
+
+if(isset($_POST['signup'])){
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  $nama = $_POST['nama'];
+  $pass = $_POST['pass'];
+
+  if($password == $pass ){
+  
+  $query = "INSERT INTO users(username,password,nama) ";
+  $query .= "VALUES ('$username', '$password', '$nama')";
+
+  $result = mysqli_query($connection, $query);
+  if(!$result){
+    die('Query is not run');
+   }
+  }else{
+    echo "Password yang anda masukkan tidak sama";
+  }
+}
+
+if(isset($_POST['signin'])){
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+
+  $username = mysqli_real_escape_string($connection, $username);
+  $password = mysqli_real_escape_string($connection, $password);
+
+  $query = "SELECT * FROM users WHERE username = '{$username}' AND password = '{$password}' ";
+  $select_user_query = mysqli_query($connection, $query);
+  $rowCheck = mysqli_num_rows($select_user_query);
+  if($rowCheck>0){
+    $row = mysqli_fetch_array($select_user_query);
+    $_SESSION['nama']= $row['nama'];
+    header("Location:home.php");
+  }else{
+    header('Location:LoginAndSignup.php');
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" >
 <head>
@@ -15,7 +63,7 @@
     <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
     <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
     <div class="login-form">
-      <form class="sign-in-htm" action="./api/user/login.php" method="GET">
+      <form class="sign-in-htm" action="LoginAndSignup.php" method="POST">
         <div class="group">
           <label for="user" class="label">Username</label>
           <input id="username" name="username" type="text" class="input">
@@ -29,8 +77,8 @@
           <label for="check"><span class="icon"></span> Keep me Signed in</label>
         </div>
         <div class="group">
-          <input type="submit" class="button" value="Sign In">
-        </div>
+          <input href="home.php" type="submit" name="signin" class="button" value="Sign In">
+        </div>  
         <div class="hr"></div>
         <div class="foot-lnk">
           <a href="#forgot">Forgot Password?</a>
@@ -42,12 +90,16 @@
           <input id="username" name="username" type="text" class="input">
         </div>
         <div class="group">
-          <label for="pass" class="label">Password</label>
+          <label for="user" class="label">Nama</label>
+          <input id="nama" name="nama" type="text" class="input">
+        </div>
+        <div class="group">
+          <label for="password" class="label">Password</label>
           <input id="password" name="password" type="password" class="input" data-type="password">
         </div>
         <div class="group">
           <label for="pass" class="label">Confirm Password</label>
-          <input id="pass" type="password" class="input" data-type="password">
+          <input id="pass" name="pass" type="password" class="input" data-type="password">
         </div>
         <div class="group">
           <input type="submit" name="signup" class="button" value="Sign Up">

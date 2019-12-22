@@ -1,23 +1,5 @@
 <?php
-if(isset($_POST['submit'])){
-  $username = $_POST['username'];
-  $password = $_POST['password'];
-
-  $connection = mysqli_connect('localhost', 'root', '', 'tugaspbo');
-  if($connection){
-    echo "sukses";
-  } else{
-   die("Database not know"); 
-  }
-
-  $query = "INSERT INTO users(username,password) ";
-  $query .= "VALUES ('$username', '$password')";
-
-  $result = mysqli_query($connection, $query);
-  if(!$result){
-    die('Query is not run');
-  }
-}
+  session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -60,6 +42,7 @@ if(isset($_POST['submit'])){
     <section>
         <div class="container">
           <div class="row">
+            <h1>Selaat datang <?php echo $_SESSION['nama'];?></h1>
             <div class="col-sm-8 mt-5">
                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                      <div class="carousel-inner">
